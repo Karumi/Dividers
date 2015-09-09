@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2015 Karumi.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+  <color name="white_text">#FFFFFF</color>
+  <color name="placeholder_light_color">#AAAAAA</color>
+  <color name="divider_dark_color">#333333</color>
+  <color name="divider_light_grey_color">#DDDDDD</color>
+  <color name="divider_red_color">#FF3322</color>
+  <color name="black_opacity_66">#AA000000</color>
+  <color name="movies_dark_divider_color">#222222</color>
+  <color name="movies_light_divider_color">#CCCCCC</color>
+  <color name="movies_highlight_divider_color">#FFCC55</color>
+  <color name="titles_background_color">#222222</color>
+</resources>
