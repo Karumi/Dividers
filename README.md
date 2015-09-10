@@ -144,6 +144,32 @@ Dividers
 
 Dividers are the smaller component that can be rendered and represent all the separators for a single cell. Internally, dividers are represented as a grid of 3x3 elements (ignoring the center). Each side can be referenced with a value from the enum ``Direction``. This can prove useful when defining complex dividers such as the ones used in headers or footers.
 
+Add it to your project
+----------------------
+
+Add ``Dividers`` dependency to your ``build.gradle`` file
+
+```groovy
+
+dependencies{
+    compile 'com.karumi:dividers:1.0.0'
+}
+
+```
+
+or to your ``pom.xml`` if you are using Maven instead of Gradle
+
+```xml
+
+<dependency>
+    <groupId>com.karumi</groupId>
+    <artifactId>dividers</artifactId>
+    <version>1.0.0</version>
+    <type>aar</type>
+</dependency>
+
+```
+
 Do you want to contribute?
 --------------------------
 
