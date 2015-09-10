@@ -1,4 +1,4 @@
-Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers)
+Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dividers-green.svg?style=flat)](http://android-arsenal.com/details/1/2467)
 ==================
 
 Dividers is an Android library to easily create separators for your RecyclerViews. It supports a wide range of dividers from simple ones that apply to all your items equally to a system of selectors that apply different styles to each item.
