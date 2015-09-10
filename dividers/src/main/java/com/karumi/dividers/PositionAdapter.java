@@ -25,30 +25,26 @@ import android.support.v7.widget.RecyclerView;
 class PositionAdapter {
 
   private final RecyclerView.LayoutManager layoutManager;
+  private final int offset;
 
-  public PositionAdapter(RecyclerView.LayoutManager layoutManager) {
+  public PositionAdapter(RecyclerView.LayoutManager layoutManager, int offset) {
     this.layoutManager = layoutManager;
+    this.offset = offset;
   }
 
   /**
    * Returns a position given the absolute index.
    */
   public Position getPositionByIndex(int index) {
-    Position position;
+    int numberOfColumns = getNumberOfColumns();
+    int numberOfRows = getNumberOfRows();
 
-    if (layoutManager instanceof GridLayoutManager) {
-      GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
-      int spanCount = gridLayoutManager.getSpanCount();
-      position = new Position(
-          index,
-          index % spanCount, index / spanCount,
-          getNumberOfColumns() - 1,
-          getNumberOfRows() - 1);
-    } else {
-      position = new Position(index, 0, index, getNumberOfColumns() - 1, getNumberOfRows() - 1);
-    }
-
-    return position;
+    return new Position(
+        index,
+        (index - offset) % numberOfColumns,
+        (index - offset) / numberOfColumns,
+        numberOfColumns - 1,
+        numberOfRows - 1);
   }
 
   /**
@@ -61,19 +57,21 @@ class PositionAdapter {
     int adjacentColumn = position.getColumn() + displacement.getX();
     int adjacentRow = position.getRow() + displacement.getY();
 
+    int numberOfRows = getNumberOfRows();
     int numberOfColumns = getNumberOfColumns();
     int numberOfItems = getNumberOfItems();
-    if (adjacentColumn < 0 || adjacentColumn >= numberOfColumns || adjacentRow < 0
-        || adjacentRow > getNumberOfRows()
+
+    if (adjacentColumn < 0 || adjacentColumn >= numberOfColumns
+        || adjacentRow < 0 || adjacentRow > numberOfRows
         || adjacentColumn + numberOfColumns * adjacentRow >= numberOfItems) {
       adjacent = Position.INVALID_POSITION;
     } else {
       adjacent = new Position(
-          getNumberOfColumns() * adjacentRow + adjacentColumn,
+          numberOfColumns * adjacentRow + adjacentColumn,
           adjacentColumn,
           adjacentRow,
-          getNumberOfColumns() - 1,
-          getNumberOfRows() - 1);
+          numberOfColumns - 1,
+          numberOfRows - 1);
     }
 
     return adjacent;
