@@ -1,7 +1,7 @@
 Dividers
 ==================
 
-Dividers is a simple Android library to create easy separators for your RecyclerViews. It supports a wide range from simple dividers for all the items to a complex system of selectors to apply different styles to each item.
+Dividers is a Android library to easily create separators for your RecyclerViews. It supports a wide range dividers from a simple one that apply all your items to system of selectors to apply different styles to each item.
 
 Screenshots
 -----------
@@ -11,7 +11,7 @@ Screenshots
 Usage
 -----
 
-The most easy way to start using ``Dividers`` is to create create a ``DividerItemDecoration`` with a simple layer and provide it to your ``RecyclerView`` as follows:
+The most easy way to start using ``Dividers`` is to create a ``DividerItemDecoration`` with a layer and provide it to your ``RecyclerView`` as follows:
 
 ```java
 // Create a drawable for your divider
