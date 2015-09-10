@@ -152,7 +152,7 @@ Add ``Dividers`` dependency to your ``build.gradle`` file
 ```groovy
 
 dependencies{
-    compile 'com.karumi:dividers:1.0.0'
+    compile 'com.karumi:dividers:1.0.1'
 }
 
 ```
@@ -164,7 +164,7 @@ or to your ``pom.xml`` if you are using Maven instead of Gradle
 <dependency>
     <groupId>com.karumi</groupId>
     <artifactId>dividers</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <type>aar</type>
 </dependency>
 
