@@ -35,10 +35,10 @@ public class DividerBuilder {
   }
 
   /**
-   * Returns a new builder with the empty drawable applied to all the sides of the divider.
+   * Returns a new builder with the eraser drawable applied to all the sides of the divider.
    */
   public static DividerBuilder fromEmpty() {
-    return from(Divider.EMPTY_DRAWABLE);
+    return from(Divider.ERASER);
   }
 
   /**
@@ -76,6 +76,27 @@ public class DividerBuilder {
       sublayers.put(direction, new Sublayer(drawable));
     }
     return this;
+  }
+
+  /**
+   * Adds the eraser drawable to all the sides of the divider.
+   */
+  public DividerBuilder erase() {
+    return with(Divider.ERASER);
+  }
+
+  /**
+   * Adds the eraser drawable to the specific direction.
+   */
+  public DividerBuilder erase(Direction direction) {
+    return with(Divider.ERASER, direction);
+  }
+
+  /**
+   * Adds the eraser drawable to all the directions provided for the divider.
+   */
+  public DividerBuilder erase(EnumSet<Direction> directions) {
+    return with(Divider.ERASER, directions);
   }
 
   /**

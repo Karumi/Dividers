@@ -97,7 +97,9 @@ class DividerMap {
     for (Layer layer : layers) {
       if (layer.isPositionSelected(position)) {
         itemDivider =
-            itemDivider.override(layer.getDivider(), layer.getDirectionsByPosition(position),
+            itemDivider.override(
+                layer.getDivider(),
+                layer.getDirectionsByPosition(position),
                 depth);
       }
       depth += 1;
