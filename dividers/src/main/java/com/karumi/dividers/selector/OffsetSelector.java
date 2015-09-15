@@ -14,40 +14,28 @@
  * limitations under the License.
  */
 
-package com.karumi.dividers;
+package com.karumi.dividers.selector;
 
-import com.karumi.dividers.selector.AllItemsSelector;
-import com.karumi.dividers.selector.Selector;
+import com.karumi.dividers.Direction;
+import com.karumi.dividers.Position;
 import java.util.EnumSet;
 
 /**
- * A layer represents the most basic unit that can be rendered.
- * It defines a set of items that will be rendered and how they will be rendered.
+ * Selects all the items with an index equal or higher than an offset.
  */
-public class Layer implements Selector {
+public class OffsetSelector implements Selector {
 
-  private final Selector selector;
-  private final Divider divider;
+  private final int offset;
 
-  public Layer(Divider divider) {
-    this.selector = new AllItemsSelector();
-    this.divider = divider;
-  }
-
-  public Layer(Selector selector, Divider divider) {
-    this.selector = selector;
-    this.divider = divider;
+  public OffsetSelector(int offset) {
+    this.offset = offset;
   }
 
   @Override public boolean isPositionSelected(Position position) {
-    return selector.isPositionSelected(position);
+    return position.getAbsoluteIndex() >= offset;
   }
 
   @Override public EnumSet<Direction> getDirectionsByPosition(Position position) {
-    return selector.getDirectionsByPosition(position);
-  }
-
-  Divider getDivider() {
-    return divider;
+    return EnumSet.allOf(Direction.class);
   }
 }

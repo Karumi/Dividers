@@ -30,7 +30,7 @@ import java.util.Map;
  */
 public class Divider {
 
-  static final Drawable EMPTY_DRAWABLE = null;
+  static final Drawable ERASER = null;
 
   private static final Map<Direction, Area> AREAS = new HashMap<>();
 

@@ -21,20 +21,18 @@ import com.karumi.dividers.Position;
 import java.util.EnumSet;
 
 /**
- * Selector that applies to a single item.
+ * Selector that applies to a single item by its index.
  */
 public class SingleItemSelector implements Selector {
 
-  private final int column;
-  private final int row;
+  private final int index;
 
-  public SingleItemSelector(int column, int row) {
-    this.column = column;
-    this.row = row;
+  public SingleItemSelector(int index) {
+    this.index = index;
   }
 
   @Override public boolean isPositionSelected(Position position) {
-    return position.getColumn() == column && position.getRow() == row;
+    return this.index == position.getAbsoluteIndex();
   }
 
   @Override public EnumSet<Direction> getDirectionsByPosition(Position position) {

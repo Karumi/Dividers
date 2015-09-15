@@ -30,8 +30,19 @@ import java.util.EnumSet;
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
-  private PositionAdapter positionAdapter;
   private final DividerMap dividerMap;
+  private PositionAdapter positionAdapter;
+  private int offset;
+
+  public DividerItemDecoration(Layer layer, int offset) {
+    this(layer);
+    this.offset = offset;
+  }
+
+  public DividerItemDecoration(Collection<Layer> layers, int offset) {
+    this(layers);
+    this.offset = offset;
+  }
 
   public DividerItemDecoration(Layer layer) {
     this(Collections.singletonList(layer));
@@ -43,7 +54,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
   @Override public void onDrawOver(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
     if (positionAdapter == null) {
-      positionAdapter = new PositionAdapter(parent.getLayoutManager());
+      positionAdapter = new PositionAdapter(parent.getLayoutManager(), offset);
     }
 
     int childCount = parent.getChildCount();
@@ -74,8 +85,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
    * |___| ___| ___|
    */
   private void drawDivider(Canvas canvas, View view, Divider divider, Position position) {
-    EnumSet<Direction> directions =
-        EnumSet.of(Direction.EAST, Direction.SOUTH_EAST, Direction.SOUTH);
+    EnumSet<Direction> directions = Direction.getSouthEastCorner();
 
     if (position.getColumn() == 0) {
       directions.add(Direction.SOUTH_WEST);

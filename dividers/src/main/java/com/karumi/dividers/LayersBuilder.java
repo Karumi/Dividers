@@ -32,7 +32,8 @@ public class LayersBuilder {
   }
 
   private LayersBuilder(Collection<Layer> layers) {
-    this.layers = layers;
+    this();
+    this.layers.addAll(layers);
   }
 
   /**
@@ -47,6 +48,14 @@ public class LayersBuilder {
    */
   public static LayersBuilder from(Collection<Layer> layers) {
     return new LayersBuilder(layers);
+  }
+
+  /**
+   * Returns the LayersBuilder with all the provided layers included.
+   */
+  public LayersBuilder add(Layer... layers) {
+    this.layers.addAll(Arrays.asList(layers));
+    return this;
   }
 
   /**

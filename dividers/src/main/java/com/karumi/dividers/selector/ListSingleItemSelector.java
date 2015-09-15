@@ -19,7 +19,7 @@ package com.karumi.dividers.selector;
 /**
  * Selector that applies to a single item in a list.
  */
-public class ListSingleItemSelector extends SingleItemSelector {
+public class ListSingleItemSelector extends GridSingleItemSelector {
 
   public ListSingleItemSelector(int row) {
     super(0, row);
