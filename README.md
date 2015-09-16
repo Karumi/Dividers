@@ -1,3 +1,5 @@
+[![Android Gems](http://www.android-gems.com/badge/Karumi/Dividers.svg?branch=master)](http://www.android-gems.com/lib/Karumi/Dividers)
+
 Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dividers-green.svg?style=flat)](http://android-arsenal.com/details/1/2467)
 ==================
 
