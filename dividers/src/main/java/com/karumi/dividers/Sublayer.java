@@ -40,7 +40,11 @@ class Sublayer {
   }
 
   public Drawable getDrawable() {
-    return drawable.mutate();
+    if (drawable != null) {
+      return drawable.mutate();
+    } else {
+      return null;
+    }
   }
 
   public int getDepth() {

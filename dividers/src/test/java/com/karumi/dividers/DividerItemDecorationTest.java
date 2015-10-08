@@ -16,20 +16,23 @@
 
 package com.karumi.dividers;
 
+import com.karumi.dividers.selector.AllItemsSelector;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Matchers;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import com.karumi.dividers.selector.AllItemsSelector;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Matchers;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
@@ -52,6 +55,7 @@ public class DividerItemDecorationTest {
   @Test public void shouldDrawAllEightAreasForADrawable() {
     givenThatThereIsOneCellToRender();
     Drawable drawableMock = mock(Drawable.class);
+    when(drawableMock.mutate()).thenReturn(drawableMock);
     List<Layer> layers = getSingleDrawableLayer(drawableMock);
     dividerItemDecoration = new DividerItemDecoration(layers);
 
@@ -63,6 +67,7 @@ public class DividerItemDecorationTest {
   @Test public void shouldDrawOneCorner() {
     givenThatThereIsOneCellToRender();
     Drawable drawableMock = mock(Drawable.class);
+    when(drawableMock.mutate()).thenReturn(drawableMock);
     List<Layer> layers = getSingleCornerDrawableLayer(drawableMock);
     dividerItemDecoration = new DividerItemDecoration(layers);
 
@@ -75,6 +80,8 @@ public class DividerItemDecorationTest {
     givenThatThereIsOneCellToRender();
     Drawable drawableMock = mock(Drawable.class);
     Drawable overrideDrawableMock = mock(Drawable.class);
+    when(drawableMock.mutate()).thenReturn(drawableMock);
+    when(overrideDrawableMock.mutate()).thenReturn(overrideDrawableMock);
     List<Layer> layers = getSingleCornerDrawableLayer(drawableMock);
     layers.addAll(getSingleCornerDrawableLayer(overrideDrawableMock));
     dividerItemDecoration = new DividerItemDecoration(layers);
