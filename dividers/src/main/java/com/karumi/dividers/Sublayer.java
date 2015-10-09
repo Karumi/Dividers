@@ -31,7 +31,7 @@ class Sublayer {
   }
 
   public Sublayer(Drawable drawable, int depth) {
-    this.drawable = drawable;
+    this.drawable = drawable != null ? drawable.mutate() : null;
     this.depth = depth;
   }
 
@@ -40,11 +40,7 @@ class Sublayer {
   }
 
   public Drawable getDrawable() {
-    if (drawable != null) {
-      return drawable.mutate();
-    } else {
-      return null;
-    }
+      return drawable;
   }
 
   public int getDepth() {
