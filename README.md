@@ -1,7 +1,7 @@
 Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dividers-green.svg?style=flat)](http://android-arsenal.com/details/1/2467)
 ==================
 
-Dividers is an Android library to easily create separators for your RecyclerViews. It supports a wide range of dividers from simple ones that apply to all your items equally to a system of selectors that apply different styles to each item.
+Dividers is an Android library to easily create separators for your RecyclerViews. It supports a wide range of dividers from simple ones, that apply to all your items equally, to a system of selectors that apply different styles to each item.
 
 Screenshots
 -----------
@@ -11,7 +11,7 @@ Screenshots
 Usage
 -----
 
-The most easy way to start using ``Dividers`` is to create a ``DividerItemDecoration`` with a layer and provide it to your ``RecyclerView`` as follows:
+The easiest way to start using ``Dividers`` is to create a ``DividerItemDecoration`` with a layer and provide it to your ``RecyclerView`` as follows:
 
 ```java
 // Create a drawable for your divider
@@ -22,7 +22,7 @@ RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(new Layer
 recyclerView.addItemDecoration(itemDecoration);
 ```
 
-If you want to use all the features of ``Dividers`` follow this steps:
+If you want to use all the features of ``Dividers`` follow these steps:
 
 * Create a collection of instances of ``Layer`` with the help of ``LayersBuilder`` to define the drawables you want to apply. Each ``Layer`` is composed of:
 * An implementation of the ``Selector`` interface, defining which items are going to be affected by the layer. **You can use one of the multiple implementations that come in the library** or create your own.
@@ -75,7 +75,7 @@ Selectors
 
 Selectors give you the possibility to apply different configurations to a fixed set of items of your view. There are multiple implementations to apply the same separator to every item in a single row (``AllItemsInRowSelector``) or column (``AllItemsInColumnSelector``).
 
-For example to show the divider in all the elements except the header you can use the following snippet:
+For example, to show the divider in all the elements except the header you can use the following snippet:
 ```java
 Drawable drawable = getResources().getDrawable(R.drawable.example_drawable);
 
@@ -104,7 +104,7 @@ public class NotInHeaderSelector implements Selector {
 }
 ```
 
-As you have seen, selectors also let you apply a divider to some sides of every item depending on things such as the position. In this way you can create selectors to display items as a whole, you can take a look at some examples as ``RowGroupSelector``:
+As you have seen, selectors also let you apply a divider to some sides of every item depending on things such as the position. In this way you can create selectors to display items as a whole, you can take a look at some examples like ``RowGroupSelector``:
 
 ```java
 public class RowGroupSelector extends AllItemsInRowSelector {
@@ -142,7 +142,7 @@ public class RowGroupSelector extends AllItemsInRowSelector {
 Dividers
 --------
 
-Dividers are the smaller component that can be rendered and represent all the separators for a single cell. Internally, dividers are represented as a grid of 3x3 elements (ignoring the center). Each side can be referenced with a value from the enum ``Direction``. This can prove useful when defining complex dividers such as the ones used in headers or footers.
+Dividers are the smallest components that can be rendered and represent all the separators for a single cell. Internally, dividers are represented as a grid of 3x3 elements (ignoring the center). Each side can be referenced with a value from the enum ``Direction``. This can prove useful when defining complex dividers such as the ones used in headers or footers.
 
 Add it to your project
 ----------------------
