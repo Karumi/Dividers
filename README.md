@@ -1,4 +1,4 @@
-Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dividers-green.svg?style=flat)](http://android-arsenal.com/details/1/2467)
+![Karumi logo][karumilogo] Dividers [![Build Status](https://travis-ci.org/Karumi/Dividers.svg?branch=master)](https://travis-ci.org/Karumi/Dividers) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.karumi/dividers) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dividers-green.svg?style=flat)](http://android-arsenal.com/details/1/2467)
 ==================
 
 Dividers is an Android library to easily create separators for your RecyclerViews. It supports a wide range of dividers from simple ones, that apply to all your items equally, to a system of selectors that apply different styles to each item.
@@ -208,3 +208,4 @@ License
 [2]: https://github.com/junit-team/junit
 [3]: https://github.com/square/picasso
 [4]: https://github.com/JakeWharton/butterknife
+[karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
