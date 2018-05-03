@@ -152,7 +152,7 @@ Add ``Dividers`` dependency to your ``build.gradle`` file
 ```groovy
 
 dependencies{
-    compile 'com.karumi:dividers:1.0.1'
+    implementation 'com.karumi:dividers:1.0.1'
 }
 
 ```
